@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  a {
+    color: #000;
+  }
+
+  a:hover {
+    text-shadow: #FFF 0px 0px 10px, #fff 0px 0px 15px, 2px 2px 2px rgba(206,89,55,0);
+    color: #000;
+  }
+  #btn:hover {
+    background-color: #000;
+    border-color: #FFF;
+    border-width: 3px;
+    color: #FFF;
+  }
+  
+  /* header */
+  
+  .header {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: white;
+    margin: 10px 5px;
+  }
+  
+/*  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #f4f4f4;
+  }  */
+  
+  .header .logo {
+    display: block;
+    float: left;
+    padding: 25px 20px;
+    text-decoration: none;
+    width: 10%;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+  #btn {
+    background-color:#ffffff;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    /*display: inline-block;*/
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 500px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+    #home {
+        background-image: url(./media/bg1.png);
+        background-size: cover;
+        color: #fff;
+        width: 100vw;
+        height: 100vh;
+
+
+        grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(10, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+    }
+
+    .hometext {
+        text-align: center;
+        display: grid;
+        grid-area: 5 / 2 / 10 / 3;
+        padding-top: 20%;
+        padding-bottom: 70%;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: auto;
+        margin-bottom: auto;
+        position:relative;
+    }
+
+    .picinfo {
+        grid-area: 10 / 3 / 11 / 4;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        bottom: 2%;
+        width: 5%;
+        padding: 10vh 10vw 10vw 3vw;
+    }
+    .picinfo p {
+        padding-left: 5px;
+        padding-right: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .picinfo img {
+        padding-right: 0;
+    }
+
+    .hometext h3 {
+        padding-top: 40px;
+        font-size: 14px;
+    }
+
+    .hometext h1 {
+        margin-top: 5px;
+        font-size: 37px;
+    }
+
+    .hometext p {
+        margin-top: 5px;
+    }
+
+
+/*SECTION 2*/
+
+
+#featured {
+    background-image: url(./media/bg2.png);
+    background-size: cover;
+    color: #fff;
+    width: 100vw;
+    height: 90vh;
+}
+
+.part2text {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30%;
+    padding-bottom: 60%;
+}
+
+.picinfo2 {
+    display: flex;
+    flex-direction: row;
+    width: 5%;
+    padding-left: 20px;
+    padding-top: 40%;
+}
+.picinfo2 p {
+    padding-left: 5px;
+    padding-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.picinfo2 img {
+    padding-right: 0;
+}
+
+.part2text h3 {
+    padding-top: 40px;
+    font-size: 16px;
+}
+
+/* SECTION 3*/
+
+
+#gear {
+    background-image: url(./media/bg3.jfif);
+    background-size:cover;
+    color: #fff;
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+}
+
+.part3text {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 60%;
+}
+
+.picinfo3 {
+    display: flex;
+    flex-direction: row;
+    width: 5%;
+    padding-left: 20px;
+    padding-top: 40%;
+    position: relative;
+    bottom: 2%;
+}
+.picinfo3 p {
+    padding-left: 5px;
+    padding-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.picinfo3 img {
+    padding-right: 0;
+}
+
+.part3text h3 {
+    padding-top: 40px;
+    font-size: 16px;
+}
+
+
+footer {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+    color: #C0C0C0;
+}
+
+footer img {
+    margin-top: 0;
+    padding-top: 10%;
+    width: 80vw;
+    padding-left: 9vw;
+}
+
+.footerlinks {
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 50px;
+grid-row-gap: 0px;
+}
+
+.leftlinkstop {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.leftlinks{
+    grid-area: 2 / 1 / 6 / 2;
+}
+.rightlinkstop {
+    grid-area: 1 / 2 / 2 / 3;
+}
+.rightlinks {
+    grid-area: 2 / 2 / 6 / 3;
+}
+
+
+.footercontent {
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.footer2 {
+    background-color: #000;
+    height: 100vh;
+    width: 100vw;
+    margin-top: 0;
+}
+
+hr {
+    margin: 0;
+}
+
+input {
+    margin-bottom: 6vh;
+    margin-top: 1vh;
+    border-radius: 8px;
+    font-size: 23px;
+    box-shadow: none;
+    border: none;
+}
+#inputbtn {
+    background-color: black;
+    z-index: 2;
+    position: relative;
+    right: 50px;
+    height: 20px;
+    box-shadow: none;
+    border: none;
+    border-radius: 8px;
+    width: 40px;
+
+}
+.newsletter {
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.footer2content{
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+.socialicons {
+    display: flex;
+    justify-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.social {
+    height: 8vh;
+    margin-bottom: 3vh;
+    width: 15vw;
+    padding: 25px;
+}
+
+  /* media */
+
+    @media (min-width: 1025px) {
+        body {
+            overflow-x: hidden;
+        }
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 15px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        padding-right: 3vw;
+        padding-top: 3vh;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+    .logo img {
+        max-width: 15vw;
+        padding-left: 5vw;
+    }
+    .home {
+        width: 100vw;
+    }
+    .hometext {
+        width: 56vw;
+        padding-left:22vw;
+        padding-right:22vw;
+        padding-bottom: 0;
+        padding-top: 20%;
+        position: relative;
+    }
+    .picinfo {
+        position: relative;
+        top: 103vh;
+        right: -20vw;
+    }
+    .part2text {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        padding-left: 60vw;
+        padding-right: 10vw;
+        padding-top: 60vh;
+        padding-bottom: 0;
+    }
+    .part2text p {
+        margin-top: 0;
+    }
+    .part2text h3 {
+        margin-bottom: 0;
+    }
+    .picinfo2 {
+        position: relative;
+        top: 63vh;
+        right: -15vw;
+    }
+    .gear {
+        background-image: url(./media/bg4-2.png);
+    }
+    .gearhalf {
+        background-color: #000;
+        width: 50%;
+    }
+    .part3text {
+        text-align: left;
+        padding-top: 17%;
+        
+    }
+    .part3text h3 {
+        font-size: 12px;
+    }
+    .part3text h1 {
+        font-size: 30px;
+    }
+    .part3text p {
+        font-size: 14px;
+    }
+    .picinfo3 {
+        position: relative;
+        bottom: -8vh;
+        right:-17vw;
+    }
+
+    .logo2 {
+        width: 10vw;
+    }
+    .footercontent > p {
+        width: 45vw;
+        position: relative;
+        left: -1vw;
+    }
+    .footerlinks {
+        position: relative;
+        right: -50vw;
+        grid-column-gap: 0;
+        width: 50%;
+        top: -20vh;
+    }
+    .imputemail {
+        position: relative;
+        right: -50vw;
+        top: -15vh;
+    }
+    input {
+        font-size: 40px;
+    }
+    .inputbtn button {
+        height: 35px;
+    }
+    .socialicons{
+        position: relative;
+        right: -63vw;
+        display: inline-block;
+        padding: 20px 0 0 0;
+    }
+    .social {
+        height: 25px;
+        width: 25px;
+        padding: 0 10px 0 10px;
+        margin: 0;
+    }
+}
+
+    @media (min-width: 650px) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 5px 5px;
+    }
+/*   .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    } 
+    .header .menu-icon {
+      display: none;
+    }  */
+    .logo img{
+        width: 35vw;
+    }
+    #hamburger {
+        width: 10vw;
+    }
+    .hometext {
+        padding-top: 11%;
+    }
+    .picinfo {
+        margin-top: -100vh;
+        padding-left: 50%;
+    }
+    .part2text{
+        padding-top: 5%;
+    }
+    .picinfo2 {
+        padding-top: 29%;
+        padding-left: 58%;
+        margin-top: -88vh;
+    }
+    .picinfo3 {
+        padding-top: 13%;
+        padding-left: 53%;
+        margin-top: -86vh;
+    }
+    footer {
+        height: 100vh;
+    }
+
+    .footercontent {
+        background-color: #000;
+        margin-bottom: 0;
+    }
+    .newsletter {
+        background-color: #000;
+        margin-top: 0;
+        padding-top: 3vh;
+        padding-bottom: 2vh;
+    }
+
+}
